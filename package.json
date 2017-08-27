@@ -1,6 +1,6 @@
 {
    "name": "jqm-simple-colorpicker",
-   "description": "A simple colorpicker for jQuery Mobile",
+   "description": "A simple colorpicker widget for jQuery Mobile",
    "version": "1.0.0",
    "keywords": [
       "jQuery",
