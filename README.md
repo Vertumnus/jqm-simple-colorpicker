@@ -86,6 +86,7 @@ var color = $('#picker').colorpicker('color')
 
 // set picked color (to blue)
 $('#picker').colorpicker('color', 'rgb(0, 0, 255)')
+```
 
 ### Events
 Beside the events of the popup widget, you can register on following event.
