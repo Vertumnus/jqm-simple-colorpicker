@@ -102,7 +102,7 @@ $('#picker').colorpicker('option', 'picked', function(event, data){
 }
 ```
 
-###Hints
+### Hints
 The widget accepts two types of formats for the color (affecting option defaultColor and method color). These are:
 * `'#rrggbb'`
 > where rr is the hexadecimal value for red, gg for green and bb for blue
