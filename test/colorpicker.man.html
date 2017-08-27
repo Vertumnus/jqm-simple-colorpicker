@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Copyright Armin Junge
+-->
+<html>
+   <head>
+      <title>Test colorpicker Widget</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="stylesheets/jquery.mobile.min.css">
+      <link rel="stylesheet" href="../src/colorpicker.less">
+      <script src="javascripts/jquery.min.js"></script>
+      <script src="javascripts/jquery.mobile.min.js"></script>
+      <script src="../bin/jqm-simple-colorpicker.min.js"></script>
+      <script type="text/javascript">
+         $(function(){
+            $('#picker').colorpicker('option', { 
+               picked:function(event, data){
+                  $('div[data-role=page]').css('background-color', data.color)
+               },
+               redText:'Rot',
+               greenText:'Grün',
+               blueText:'Blau',
+               defaultColor:$('div[data-role=page]').css('background-color')
+            })
+            $('#button').click(function(){
+               $('#picker').colorpicker('open')
+            })
+         })
+      </script>
+   </head>
+   <body>
+      <a id="button" href="#picker" data-rel="popup" class="ui-btn ui-btn-inline">Pick color</a>
+      <div id="picker" data-role="colorpicker" data-transition="turn">Test</div>
+   </body>
+</html>

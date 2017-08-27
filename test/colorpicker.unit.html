@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Copyright Armin Junge
+-->
+<html>
+   <head>
+      <title>Continuous Test colorpicker Widget</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+      <link rel="stylesheet" href="stylesheets/jquery.mobile.min.css">
+      <link rel="stylesheet" href="../src/colorpicker.less">
+      <script src="../node_modules/mocha/mocha.js"></script>
+      <script type="text/javascript">
+         mocha.setup('bdd')
+      </script>
+      <script src="javascripts/jquery.min.js"></script>
+      <script src="javascripts/jquery.mobile.min.js"></script>
+      <script src="../src/colorpicker.js" data-cover></script>
+      <script src="colorpicker.unit.js"></script>
+   </head>
+   <body>
+      <div id="mocha"></div>
+      <div id="picker" data-role="colorpicker">Test</div>
+
+      <script type="text/javascript">
+         mocha.globals(['jQuery'])
+         mocha.run()
+      </script>
+   </body>
+</html>

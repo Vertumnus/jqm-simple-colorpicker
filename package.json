@@ -1,0 +1,35 @@
+{
+   "name": "jqm-simple-colorpicker",
+   "description": "A simple colorpicker for jQuery Mobile",
+   "version": "1.0.0",
+   "keywords": [
+      "jQuery",
+      "mobile",
+      "widget",
+      "color",
+      "picker"
+   ],
+   "author": "Armin Junge",
+   "license": "MIT",
+   "repository": "git://github.com/Vertumnus/jqm-simple-colorpicker.git",
+   "bugs": {
+      "url": "https://github.com/Vertumnus/jqm-simple-colorpicker/issues"
+   },
+   "directories": {
+      "bin": "./bin",
+      "test": "./test",
+      "src": "./src"
+   },
+   "contributors": [],
+   "dependencies": {},
+   "devDependencies": {
+      "grunt": "^1.0.1",
+      "grunt-contrib-jshint": "^1.1.0",
+      "grunt-contrib-less": "^1.4.1",
+      "grunt-contrib-uglify": "github:gruntjs/grunt-contrib-uglify#harmony",
+      "grunt-npm-command": "^0.1.2",
+      "mocha": "^3.5.0",
+      "uglify-es": "github:mishoo/UglifyJS2#harmony"
+   },
+   "scripts": {}
+}
