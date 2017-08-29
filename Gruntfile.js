@@ -42,6 +42,30 @@ module.exports = function (grunt) {
                cmd: 'publish'
             }
          }
+      },
+      karma: {
+         options: {
+            configFile: 'karma.conf.js'
+         },
+         test: {},
+         coverage: {
+            browsers: ['Chrome'],
+            preprocessors: {
+               'src/*.js': ['coverage'],
+               'test/*.auto.html': ['html2js'],
+               '**/*.less': ['less']
+            },
+            reporters: ['progress', 'coverage'],
+            coverageReporter: {
+               type: 'lcov',
+               dir: 'coverage/'
+            }
+         }
+      },
+      coveralls: {
+         io: {
+            src: 'coverage/*/*.info'
+         }
       }
    })
    
@@ -49,8 +73,12 @@ module.exports = function (grunt) {
    grunt.loadNpmTasks('grunt-contrib-uglify')
    grunt.loadNpmTasks('grunt-contrib-jshint')
    grunt.loadNpmTasks('grunt-npm-command')
+   grunt.loadNpmTasks('grunt-karma')
+   grunt.loadNpmTasks('grunt-coveralls')
    
    grunt.registerTask('check', ['jshint'])
-   grunt.registerTask('publish', ['npm-command:publish'])
-   grunt.registerTask('default', ['jshint', 'less', 'uglify'])
+   grunt.registerTask('test', ['karma:test'])
+   grunt.registerTask('coverage', ['karma:coverage'])
+   grunt.registerTask('build', ['check', 'coverage', 'less', 'uglify'])
+   grunt.registerTask('publish', ['build', 'coveralls', 'npm-command:publish'])
 }

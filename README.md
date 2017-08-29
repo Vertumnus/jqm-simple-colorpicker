@@ -1,5 +1,6 @@
 # Simple Colorpicker Widget
 
+[![Coverage Status](https://coveralls.io/repos/github/Vertumnus/jqm-simple-colorpicker/badge.svg?branch=master)](https://coveralls.io/github/Vertumnus/jqm-simple-colorpicker?branch=master)
 [![npm](https://img.shields.io/npm/dt/jqm-simple-colorpicker.svg)](https://www.npmjs.com/package/jqm-simple-colorpicker)
 [![npm](https://img.shields.io/npm/v/jqm-simple-colorpicker.svg)](https://www.npmjs.com/package/jqm-simple-colorpicker)
 [![npm](https://img.shields.io/npm/l/jqm-simple-colorpicker.svg)](https://www.npmjs.com/package/jqm-simple-colorpicker)
@@ -7,6 +8,9 @@
 This is a widget for jQuery mobile. It is an extension of the [popup widget](http://api.jquerymobile.com/popup/) 
 and supplies three range sliders to specify a red, green and blue value. 
 The resulting color is shown in front of the popup.
+
+## Preview
+![Colorpicker Popup](preview.png)
 
 ## Preconditions
 The widget is implemented in ECMAScript 2015, so your project should support
