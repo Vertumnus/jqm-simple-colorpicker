@@ -161,6 +161,25 @@ describe('Usage', function(){
          picker.colorpicker('close')
       })
    })
+   context('#Options on Open', function(){
+      it('should overtake default color', function(){
+         picker.colorpicker('open', {
+            defaultColor: '#888888'
+         })
+         let color = picker.colorpicker('color')
+         assert(color === '#888888', `default color was not set in correct way: ${color}`)
+      })
+      it('should register picked event', function(){
+         let fired = false
+         picker.colorpicker('open', {
+            picked: function(event, data){
+               fired = true
+            }
+         })
+         $('#picker-ok').click()
+         assert(fired, 'picked event was not raised')
+      })
+   })
    context('#Fallback', function(){
       it('should take black if a wrong color format is used', function(){
          picker.colorpicker('color', 'R=77 G=88 B=99')

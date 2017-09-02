@@ -1,7 +1,7 @@
 {
    "name": "jqm-simple-colorpicker",
    "description": "A simple colorpicker widget for jQuery Mobile",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "keywords": [
       "jQuery",
       "mobile",
@@ -22,6 +22,10 @@
    },
    "contributors": [],
    "dependencies": {},
+   "peerDependencies": {
+      "jquery": "2.1.4",
+      "jquery-mobile": "1.4.5"
+   },
    "devDependencies": {
       "grunt": "^1.0.1",
       "grunt-contrib-jshint": "^1.1.0",

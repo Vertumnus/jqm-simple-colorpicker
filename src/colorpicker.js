@@ -79,12 +79,22 @@ $.widget( 'vertumnus.colorpicker', $.mobile.popup, {
       
       return [0, 0, 0]
    },
-   open: function(){
+   open: function(options){
+      if(options){
+         // set default color if supplied
+         if(options.defaultColor)
+            this._setOption('defaultColor', options.defaultColor)
+         // set picked event handler if supplied
+         if(options.picked)
+            this._setOption('picked', options.picked)
+      }
+      // use newly set default color
       if(this._defaultColorChanged){
          this.color(this.options.defaultColor)
          this._defaultColorChanged = false
       }
-      this._super()
+      
+      this._super(options)
    },
    color: function(color){
       let red, green, blue
